@@ -4,6 +4,13 @@ var contadorClicksBoton = 1;
 
 //Listeners
 botonNuevoTweet.addEventListener("click", mainFunction);
+nuevoTweet.addEventListener("keyup", cuentaCaracteres);
+
+function cuentaCaracteres (){
+  if (nuevoTweet.value.length >= 140) {
+    alert("ño!!!");
+  }
+}
 
 //funcion princpipal
 function mainFunction(){
@@ -31,5 +38,6 @@ function mainFunction(){
   document.getElementById("nuevoTituloTweet" + contadorClicksBoton).innerText = tituloTweet.value;
   document.getElementById("tweeterx" + contadorClicksBoton).innerText = "creado por : " + nombreTweeterx.value;
   document.getElementById("articulo" + contadorClicksBoton).innerText = nuevoTweet.value;
+
   contadorClicksBoton += 1;
 }
